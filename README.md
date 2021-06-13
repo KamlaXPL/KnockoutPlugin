@@ -1,4 +1,4 @@
-# # KnockoutPlugin
+# KnockoutPlugin
 A makeshift plug-in for knockouts.
 
 If you have any suggestions for changing the code, adding some function, create an issue or write to me in private message on discord: KamlaX#0001
