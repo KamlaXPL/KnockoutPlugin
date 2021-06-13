@@ -1,0 +1,10 @@
+name: Knockout-Plugin
+main: pl.kamlax.knockout.KnockoutPlugin
+version: 1.0
+author: kamlax
+website: https://github.com/KamlaXPL/KnockoutPlugin
+api-version: 1.13
+commands:
+  knockout:
+    aliases:
+      - poddajesie

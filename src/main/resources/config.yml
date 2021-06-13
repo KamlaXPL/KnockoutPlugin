@@ -1,0 +1,29 @@
+options:
+  time: 60 #Seconds
+  resurrectionTime: 15 #Seconds
+  title: #Settings about title
+    fadeIn: 0
+    stay: 40
+    fadeOut: 70
+messages:
+  isNotKnockedOut: "&8>> &cYou aren't knocked out!"
+  knockedout:
+    title: "&c&lYou got knocked out!"
+    subtitle: "&8>> &7You will die in &6{TIME}&7!"   #Variable {TIME} returns String, which displays the remaining time to die
+  resuscitation:
+    title: ""
+    subtitle: "&aYou will be revived in &2{TIME}&7"   #Variable {TIME} returns String, which displays the remaining time to resurrection
+  resuscitationToResuscitator:
+    title: ""
+    subtitle: "&aHe will be revived in &2{TIME}&7"   #Variable {TIME} returns String, which displays the remaining time to resurrection
+  resurrected:
+    title: ""
+    subtitle: "&6You have been resurrected by &e{PLAYER}"   #Variable {PLAYER} returns player, who resurrected other player
+  resurrectedToResuscitator:
+    title: ""
+    subtitle: "&6You resurrected &e{PLAYER}"   #Variable {PLAYER} returns the resurrected player
+  surrender:
+    messageToOnlinePlayers: true   #Sends a message in global chat when player surrenders
+    message: "&8>> &7Player &c{PLAYER} &7has given up!"   #Variable {PLAYER} returns player, who given up using command
+    title: ""
+    subtitle: "&c&lYou gave up! :("
