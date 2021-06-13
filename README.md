@@ -10,7 +10,7 @@ Supported minecraft versions: **1.13, 1.14, 1.15, 1.16, 1.17**
 # For developers
 I created events for developers, list events:
 
-> **PlayerEndRescueEvent, PlayerKnokcoutEvent, PlayerStartRescueEvent and PlayerStopRescueEvent**
+> **PlayerEndRescueEvent, PlayerKnockoutEvent, PlayerStartRescueEvent and PlayerStopRescueEvent**
 
 example of use:
 
