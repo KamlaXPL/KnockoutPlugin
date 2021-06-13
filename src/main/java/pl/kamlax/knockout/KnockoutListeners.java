@@ -85,9 +85,8 @@ public class KnockoutListeners implements Listener {
 
     @EventHandler
     public void onRescue(PlayerInteractAtEntityEvent event) {
-        if (!(event.getRightClicked() instanceof Player))
+        if (!(event.getRightClicked() instanceof Player player))
             return;
-        var player = event.getPlayer();
         if (!player.isSneaking())
             return;
         var target = ((Player) event.getRightClicked()).getPlayer();
@@ -121,7 +120,7 @@ public class KnockoutListeners implements Listener {
             @Override
             public void run() {
                 plugin.getUserCache().findUser(target.getUniqueId()).ifPresent(user -> {
-                    if (!player.isSneaking() || !user.isRescue() || player.getLocation().distance(target.getLocation()) > 3) {
+                    if (!(player.isSneaking() || user.isRescue()) || player.getLocation().distance(target.getLocation()) > 3) {
                         Bukkit.getPluginManager().callEvent(new PlayerStopRescueEvent(player, target, user.getRescueTime()));
                         user.setRescue(false);
                         cancel();
