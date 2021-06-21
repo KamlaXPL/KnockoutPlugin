@@ -21,10 +21,6 @@ public class UserCache {
     }
 
     public Optional<User> findUser(UUID uuid) {
-        return userMap
-                .values()
-                .stream()
-                .filter(user -> user.getPlayerUUID().equals(uuid))
-                .findFirst();
+        return Optional.ofNullable(getUser(uuid));
     }
 }

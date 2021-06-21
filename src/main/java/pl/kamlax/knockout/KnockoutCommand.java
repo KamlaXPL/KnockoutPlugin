@@ -30,10 +30,11 @@ public class KnockoutCommand implements CommandExecutor {
                 return;
             }
             player.setHealth(0.0D);
-            String surrenderMessage = plugin.getConfigurationHelper().surrenderMessage.replace("{PLAYER}", player.getName());
-            if (plugin.getConfigurationHelper().surrenderMessageToPlayers)
+            if (plugin.getConfigurationHelper().surrenderMessageToPlayers) {
+                String surrenderMessage = plugin.getConfigurationHelper().surrenderMessage.replace("{PLAYER}", player.getName());
                 for (var players : Bukkit.getOnlinePlayers())
                     players.sendMessage(surrenderMessage);
+            }
             player.sendTitle(
                     plugin.getConfigurationHelper().surrenderTitle,
                     plugin.getConfigurationHelper().surrenderSubTitle,

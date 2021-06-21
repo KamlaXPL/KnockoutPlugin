@@ -94,9 +94,7 @@ public class KnockoutListeners implements Listener {
             return;
         var user = plugin.getUserCache().getUser(player.getUniqueId());
         var targetUser = plugin.getUserCache().getUser(target.getUniqueId());
-        if (!targetUser.isKnockout() || user.isKnockout())
-            return;
-        if (targetUser.isRescue())
+        if (!targetUser.isKnockout() || user.isKnockout() || targetUser.isRescue())
             return;
 
         PlayerStartRescueEvent playerStartRescueEvent = new PlayerStartRescueEvent(player, target);
