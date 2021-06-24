@@ -14,7 +14,14 @@ I created events for developers, list events:
 
 example of use:
 
-![image_2021-06-13_135531](https://user-images.githubusercontent.com/40739398/121806143-0303de80-cc4f-11eb-84c9-e02164a3a665.png)
+```java
+import pl.kamlax.knockout.events.PlayerEndRescueEvent;
+
+@EventHandler
+public void onPlayerEndRescue(PlayerEndRescueEvent event) { 
+  //code here
+}
+```
 
 # Frequent problems
 If you get this error:
