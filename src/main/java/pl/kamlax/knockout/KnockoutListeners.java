@@ -51,11 +51,9 @@ public class KnockoutListeners implements Listener {
 
         if (to.getBlockX() != from.getBlockX() || to.getBlockY() != from.getBlockY() || to.getBlockZ() != from.getBlockZ()) {
             Player player = event.getPlayer();
-            plugin.getUserCache().findUser(player.getUniqueId()).ifPresent(user -> {
-                if (!user.isKnockout())
-                    return;
-                createBarrierBlock(player, to);
-            });
+            plugin.getUserCache().findUser(player.getUniqueId())
+                    .filter(User::isKnockout)
+                    .ifPresent(user -> createBarrierBlock(player, to));
         }
     }
 
