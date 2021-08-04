@@ -12,10 +12,9 @@ import java.util.logging.Level;
  * @author Kamil "kamlax" Okoń
  */
 
+@Getter
 public final class KnockoutPlugin extends JavaPlugin {
-    @Getter
     private UserCache userCache;
-    @Getter
     private ConfigurationHelper configurationHelper;
 
     @Override
